@@ -72,8 +72,8 @@ make_dfps() {
     build_targets $ARM64_PREFIX "dfps"
     ls -la
     ls -la build
-    copy_targets $ARM64_PREFIX dfps $BUILD_DIR/package/dfps
-}
+    ls -la build/$ARM64_PREFIX
+    }
 
 pack_dfps() {
     echo ">>> Preparing dfps binary"
