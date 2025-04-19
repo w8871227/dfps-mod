@@ -24,7 +24,7 @@ jobs:
       run: chmod +x build.sh
 
     - name: Build and package DFPS
-      run: ./build.sh Release "make pack"
+      run: ./build.sh Release
       env:
         ANDROID_NDK: ${{ env.ANDROID_NDK_HOME }} # Ensure the script uses the NDK path set by the action
 
@@ -32,4 +32,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: dfps-magisk
-        path: build/package/dfps-magisk.zip
+        path: build/package/dfps
