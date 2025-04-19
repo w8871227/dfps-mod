@@ -32,4 +32,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: dfps
-        path: build/package/dfps
+        path: /home/runner/work/dfps
