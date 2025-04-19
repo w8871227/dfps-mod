@@ -70,6 +70,7 @@ copy_libs() {
 make_dfps() {
     echo ">>> Making dfps binaries"
     build_targets $ARM64_PREFIX "dfps"
+    copy_targets $ARM64_PREFIX dfps $BUILD_DIR/package/dfps
 }
 
 pack_dfps() {
@@ -79,15 +80,13 @@ pack_dfps() {
 }
 
 install_dfps() {
-    echo ">>> Pushing dfps-magisk.zip to device"
-    adb push $BUILD_DIR/package/dfps-magisk.zip /data/local/tmp
-    echo ">>> Installing dfps on device"
-    adb shell su -c magisk --install-module /data/local/tmp/dfps-magisk.zip
+    echo ">>> Preparing dfps binary installation"
+    # 删除与Magisk相关的adb命令
+    # 保留必要部署逻辑（若有）
 }
 
 reboot_install_dfps() {
-    echo ">>> Reboot device"
-    adb shell reboot
+    echo ">>> Removing obsolete reboot function"
 }
 
 clean() {

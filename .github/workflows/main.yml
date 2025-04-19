@@ -31,5 +31,5 @@ jobs:
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
-        name: dfps-magisk
+        name: dfps
         path: build/package/dfps
