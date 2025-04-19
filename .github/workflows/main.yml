@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up Android NDK
-      uses: nanasess/setup-android-ndk@v1
+      uses: nttld/setup-ndk@v1
       with:
         ndk-version: r23c # Or specify the version required by your project
 
