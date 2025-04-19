@@ -73,21 +73,9 @@ make_dfps() {
 }
 
 pack_dfps() {
-    echo ">>> Packing dfps-magisk.zip"
-    cd $BASEDIR/magisk
-
-    copy_targets $ARM64_PREFIX dfps $BASEDIR/magisk/bin/dfps
-    copy_libs $BASEDIR/magisk/bin
-    cp -f $BASEDIR/LICENSE .
-    cp -f $BASEDIR/NOTICE .
-
-    zip dfps-magisk.zip -q -9 -r .
+    echo ">>> Preparing dfps binary"
     mkdir -p $BUILD_DIR/package
-    mv -f dfps-magisk.zip $BUILD_DIR/package
-
-    rm -f bin/dfps
-    rm -f bin/*.so
-    rm -f LICENSE NOTICE
+    copy_targets $ARM64_PREFIX dfps $BUILD_DIR/package/dfps
 }
 
 install_dfps() {
