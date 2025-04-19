@@ -18,8 +18,11 @@
 # stop on error
 set -e
 
-TOOLCHAIN_PREBUILT="$ANDROID_NDK/toolchains/llvm/prebuilt/linux-x86_64"
+TOOLCHAIN_PREBUILT="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64"
 TOOLCHAIN_BIN="$TOOLCHAIN_PREBUILT/bin"
+
+export CC="$TOOLCHAIN_BIN/aarch64-linux-android23-clang"
+export CXX="$TOOLCHAIN_BIN/aarch64-linux-android23-clang++"
 BASEDIR="$(dirname $(readlink -f "$0"))"
 BUILD_DIR="$BASEDIR/build"
 BUILD_TYPE="$1"
