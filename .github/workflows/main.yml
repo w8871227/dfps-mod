@@ -24,7 +24,7 @@ jobs:
       run: chmod +x build.sh
 
     - name: Build and package DFPS
-      run: ./build.sh Release
+      run: ./build.sh Release make_dfps
       env:
         ANDROID_NDK: ${{ env.ANDROID_NDK_HOME }} # Ensure the script uses the NDK path set by the action
 
