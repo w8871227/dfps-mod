@@ -70,9 +70,7 @@ copy_libs() {
 make_dfps() {
     echo ">>> Making dfps binaries"
     build_targets $ARM64_PREFIX "dfps"
-    ls -la
-    ls -la build
-    ls -la build/$ARM64_PREFIX
+    copy_targets $ARM64_PREFIX dfps $BUILD_DIR/package/dfps
     }
 
 pack_dfps() {
