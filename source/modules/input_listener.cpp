@@ -29,7 +29,12 @@ constexpr int MIN_INTERVAL_US = MsToUs(2);
 constexpr int POLL_RETRY_US = MsToUs(1000);
 constexpr float SWIPE_INC_LIMIT = 0.2;
 constexpr int DEV_DIR_WATCH_FLAG = Inotify::CREATE | Inotify::DELETE;
-
+//
+//
+//
+//
+//
+//
 struct InputListenerDef {
     bool enable;
     double swipeThd;
